@@ -1,0 +1,284 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    background-color: #fbfbfb;
+    color: #0f0f0f;
+    max-width: 100%;
+    margin: auto;
+}
+
+/*---Funcion modo nocturno*/
+
+body.modonocturno {
+    background-color: #633e5a4f;
+}
+
+
+header {
+    background-color: #fbfbfb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0 8px rgb(123, 123, 123);
+    width: 100%;
+    height: 90px;
+    padding: 16px;
+    margin: 0;
+    /*quede fijo*/
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 28px;
+    text-align: center;
+}
+
+
+#menu{
+    list-style: none;
+}
+
+li {
+    display: inline;
+    margin: auto;
+    padding: 16px;
+}
+
+/*---------- MENU-----------------*/
+
+.logo {
+    max-width: 160px;
+    box-shadow: 0 0 8px rgb(123, 123, 123);
+
+}
+
+li.menu-item:hover,
+.active {
+    background-color: rgb(175, 89, 158, 0.3);
+    color: #af599e;
+    transition: background-color 0.3s;
+}
+
+nav {
+    margin-right: 10px;
+}
+
+.open-menu,
+.close-menu {
+    display: none;
+}
+
+
+section {
+    margin: 100px 20px 20px 20px;
+    line-height: 1.2;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+article.presentacion {
+    text-align: center;
+}
+
+
+article.hablemos {
+    background-color: rgb(175, 89, 158, 0.3);
+    border-radius: 10px;
+    margin: 5px;
+    padding: 10px;
+
+}
+
+p {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+i {
+    font-size: 24px;
+    padding: 10px;
+}
+
+a.boton:hover {
+    color: #0b090a;
+    transition: color 0.3s;
+}
+
+
+footer,
+button#descarga {
+    background-color: #af599e;
+    color: #fbfbfb;
+    text-align: center;
+}
+
+button#descarga {
+    font-size: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 40px;
+    max-width: 100%;
+}
+
+button#modonocturno {
+    font-size: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 40px;
+    max-width: 100%;
+    margin: 10px;
+}
+
+footer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  
+}
+
+
+/* GALERIA*/
+
+
+.fotopersonal {
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border-radius: 100%;
+    text-align: center;
+}
+
+#redes {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.imgredes {
+    max-width: 80px;
+    max-height: 80px;
+    padding: 10px;
+    margin: 20px;
+}
+
+/* Para que los enlaces hereden el color de texto y no tengan subrayado */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
+*  el margin: auto; para tenerlo centrado fácilmente ;)
+*/
+main {
+    margin: auto;
+    max-width: 1200px;
+
+}
+
+/*RESPONSIVE*/
+
+@media (min-width: 1024px) {
+    section#Inicio {
+        flex-direction: row;
+        min-height: 60vh;
+        margin: 20vh 10% 10% 10%;
+    }
+
+
+    article.presentacion {
+        text-align: left;
+        width: 60%;
+        margin: 20px;
+
+    }
+
+    h1 {
+        text-align: left;
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    p.presentacion {
+        text-align: left;
+    }
+
+
+    section#Contacto {
+        margin: 20px;
+    }
+
+    article.hablemos {
+        text-align: center;
+        width: 50%;
+        margin: 10px;
+    }
+}
+
+/* ⬇️Interactividad con el JS para el menu mobile*/
+
+@media screen and (max-width: 550px) {
+
+    .open-menu,
+    .close-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    nav {
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color:#fbfbfbe8;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(255, 255, 255, 0.5);
+
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+    }
+
+    nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+}
+

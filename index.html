@@ -7,57 +7,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yulianny Diaz</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="./ccs/stylos.css">
+    <link rel="stylesheet" href="./ccs/styles.css">
+    <!--Iconos-->
+    <script src="https://kit.fontawesome.com/c9d658e1f5.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
 
-        <img class="logo" src="./Img/Logo_principal.png" alt="logo">
-        <nav>
-            <ul>
-                <li><a href="#Inicio">Inicio</a></li>
+        <img class="logo" src="/Img/logo2.png" alt="logo">
 
-                <li><a href="#Contacto">Contacto</a></li>
+        <button class="open-menu" id="open"> <i class="fa-solid fa-ellipsis-vertical"></i></button>
+
+        <nav id="nav" class="nav">
+
+            <button class="close-menu" id="close"><i class="fa-solid fa-xmark"></i></button>
+
+            <ul id="menu">
+                <li class="menu-item active"><a href="#Inicio">Inicio</a></li>
+
+                <li class="menu-item"><a href="#Contacto">Contacto</a></li>
             </ul>
         </nav>
+
     </header>
 
     <main>
-        <section id="Inicio">
 
+
+        <section id="Inicio">
 
             <img class="fotopersonal" src="./Img/IMG_20230618_164615_1.jpg" alt="Fotopersonal">
 
-            <h1>Hola! Soy Yulianny</h1> <br>
+            <article class="presentacion">
+                <h1>
+                    Hola! Soy Yulianny...</i></h1> <br>
 
-            <p>Tengo la capacidad de innovar y evulocionar en nuevos ambitos como lo es la Tecnologia , donde pueda
-                aportar mis habilidades y destrezas con el fin de obtener mejores resultado en proyectos y metas
-                planteadas tanto individualmente como en equipos de trabajos</p><br>
+                <p class="presentacion">Tengo la capacidad de innovar y evulocionar en nuevos ambitos como lo es la
+                    Tecnologia , donde pueda
+                    aportar mis habilidades y destrezas con el fin de obtener mejores resultado en proyectos y metas
+                    planteadas tanto individualmente como en equipos de trabajos</p><br>
 
-            <button>
-                <h3><a href="./YuliannyDiaz.SintesisCurricular.pdf">Descargar mi CV</a></h3>
-            </button>
+                <button id="descarga">
+
+                    <h3><a class="boton" href="./YuliannyDiaz.SintesisCurricular.pdf">Descargar mi CV</a><i
+                            class="fa-solid fa-down-long"></i></h3>
+
+                </button>
+
+            </article>
+
         </section>
         <br>
 
+
         <section id="Contacto">
-            <article>
-                <h2>Hablemos!</h2> <br>
-                <p>Soy una mujer muy activarac, pratique Telas Acrobaticas o Aereas, me gusta bailar, en particular
+            <article class="hablemos">
+                <h2> <i class="fa-regular fa-lightbulb"></i>
+                    Hablemos!</h2> <br>
+                <p>Soy una mujer muy activa, pratique Telas Acrobaticas o Aereas, me gusta bailar, en particular
                     salsa
-                    casino donde tengo desenvolvimiento avanzadogit push
+                    casino donde tengo desenvolvimiento avanzado
                     y me gusta asistir a clases de Funcional en el Gym. Siempre me ha gustado aprender cosas nuevas y
                     ser investigadora, soy comunicativa y bastante sociable.
                 </p>
             </article>
 
             <figure id="redes">
-                <div><a target="_blank" href="mailto:yuliannydl@gmail.com"><img class="imgredes" src="./Img/mail.png" alt="mail"></a>
+                <div><a target="_blank" href="mailto:yuliannydl@gmail.com"><img class="imgredes" src="./Img/mail.png"
+                            alt="mail"></a>
                 </div>
-                <div><a target="_blank" href="https://www.linkedin.com/in/yulianny-diaz-a410131a8/"><img class="imgredes"
-                            src="./Img/linkedin.png" alt="linkedin"></a></div>
-                <div><a target="_blank" href="https://github.com/"><img class="imgredes" src="./Img/github.png" alt="github"></a></div>
+                <div><a target="_blank" href="https://www.linkedin.com/in/yulianny-diaz-a410131a8/"><img
+                            class="imgredes" src="./Img/linkedin.png" alt="linkedin"></a></div>
+                <div><a target="_blank" href="https://github.com/Yuliannyd/proyecto-2-cod-latam"><img class="imgredes"
+                            src="./Img/github.png" alt="github"></a></div>
             </figure>
 
         </section>
@@ -65,6 +88,12 @@
 
     <footer>
         <h4>Codigo Latam</h4>
+
+        <button class="boton-nocturno" id='modonocturno'>
+           <span> <i class="fa-regular fa-sun"></i></span>
+           <span><i class="fa-regular fa-moon"></i> </span>
+        </button>
+
     </footer>
 
     <script src="/java/main.js"></script>
