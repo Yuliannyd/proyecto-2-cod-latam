@@ -11,7 +11,7 @@ menuItems.forEach
     });
 })
 
-
+console.log(menuItems);
 //funcion para cambiar style a la pag//
 
 const oscuro= document.querySelector('#modonocturno')
@@ -20,7 +20,6 @@ oscuro.addEventListener('click', function(){
     document.body.classList.toggle('modonocturno')
 }
 )
-
 
 /*funcion menu hamburguesa*/
 
