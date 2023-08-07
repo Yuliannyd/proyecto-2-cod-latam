@@ -12,16 +12,19 @@ menuItems.forEach
 })
 
 console.log(menuItems);
-//funcion para cambiar style a la pag//
 
-const oscuro= document.querySelector('#modonocturno')
 
-oscuro.addEventListener('click', function(){
-    document.body.classList.toggle('modonocturno')
-}
-)
 
-/*funcion menu hamburguesa*/
+/*funcion para cambiar MODO NOCTURNO a la pag*/
+
+const botonoscuro= document.querySelector('.modonocturno')
+
+botonoscuro.addEventListener('click', function () {
+    botonoscuro.classList.toggle('oscuro');
+    document.body.classList.toggle('oscuro');   
+})
+
+/*funcion MENU hamburguesa*/
 
 const nav= document.querySelector('#nav');
 const open= document.querySelector('#open');
